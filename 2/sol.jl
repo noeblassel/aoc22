@@ -1,3 +1,5 @@
+#!/bin/env julia
+
 function sol(f)
     lines=readlines(f)
     scores=(3,6,0)
@@ -13,4 +15,6 @@ function sol(f)
     end
 
     return score_a,score_b
-end       
+end
+
+print(sol("input"))

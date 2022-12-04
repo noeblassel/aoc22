@@ -1,3 +1,5 @@
+#!/bin/env julia
+
 function sol(f)
     lines=readlines(f)
     elves=Int64[]
@@ -15,3 +17,5 @@ function sol(f)
     sort!(elves)
     return elves[end],sum(elves[end-2:end])
 end
+
+print(sol("input"))

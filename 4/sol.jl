@@ -1,3 +1,5 @@
+#!/bin/env julia
+
 function sol(f)
     lines=readlines(f)
     n_subset=0
@@ -10,3 +12,5 @@ function sol(f)
     end
     return n_subset,n_overlap
 end
+
+print(sol("input"))

@@ -1,3 +1,5 @@
+#!/bin/env julia
+
 @inline priority(c::Char) = Int(c) - 96 + (isuppercase(c) ? 58 : 0) 
 
 function sol(f)
@@ -14,3 +16,5 @@ function sol(f)
     end
     return sum_priorities_a,sum_priorities_b
 end
+
+print(sol("input"))
