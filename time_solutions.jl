@@ -1,13 +1,17 @@
 #!/bin/env julia
 using BenchmarkTools
 
-for i=1:4
+for i=1:5
     include("$i/sol.jl")
 end
 
-using .DayOne,.DayTwo,.DayThree,.DayFour
+modules=[:DayOne,:DayTwo,:DayThree,:DayFour,:DayFive]
 
-module_list=[DayOne,DayTwo,DayThree,DayFour]
+for m=modules
+    Base.require(Main,m)
+end
+
+module_list=eval.(Expr.(modules))
 
 for (i,m)=enumerate(module_list)
     m.sol("$i/input")
