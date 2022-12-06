@@ -1,11 +1,11 @@
 #!/bin/env julia
 using BenchmarkTools
 
-for i=1:5
+for i=1:6
     include("$i/sol.jl")
 end
 
-days=[DayOne,DayTwo,DayThree,DayFour,DayFive]
+days=[DayOne,DayTwo,DayThree,DayFour,DayFive,DaySix]
 
 for (i,day)=enumerate(days)
     day.sol("$i/input")
