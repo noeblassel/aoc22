@@ -12,7 +12,8 @@ sols=[(68467,203420),
         (7763,2569),
         (507,897),
         ("RTGWZTHLD","STHGRZZFR"),
-        (1093,3534)]
+        (1093,3534),
+        (1182909,2832508)]
         
 for (i,day)=enumerate(days)
      @assert day.sol("$i/input")==sols[i]

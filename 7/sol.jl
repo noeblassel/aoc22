@@ -44,7 +44,7 @@ export sol,FileTree
         unused_space = 70000000 - root_node.size
         find_optimal_deletion!(root_node,answers,unused_space)
 
-        return answers
+        return (answers[1],answers[2])
     end
 
 
