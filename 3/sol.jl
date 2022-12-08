@@ -1,4 +1,4 @@
-module DayThree
+module Day3
 export sol
 
     @inline priority(c::Char) = Int(c) - 96 + (isuppercase(c) ? 58 : 0) 

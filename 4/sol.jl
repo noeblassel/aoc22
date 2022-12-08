@@ -1,4 +1,4 @@
-module DayFour
+module Day4
 
 export sol
 

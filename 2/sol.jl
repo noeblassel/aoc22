@@ -1,4 +1,4 @@
-module DayTwo
+module Day2
 
 export sol
     function sol(f)

@@ -1,4 +1,4 @@
-module DayEight
+module Day8
 
     export sol
 

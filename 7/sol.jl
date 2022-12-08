@@ -1,4 +1,4 @@
-module DaySeven
+module Day7
 export sol,FileTree
 
     mutable struct FileTree
