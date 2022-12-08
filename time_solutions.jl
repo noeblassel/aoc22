@@ -1,11 +1,11 @@
 #!/bin/env julia
 using BenchmarkTools
 
-for i=1:6
+for i=1:7
     include("$i/sol.jl")
 end
 
-days=[DayOne,DayTwo,DayThree,DayFour,DayFive,DaySix]
+days=[DayOne,DayTwo,DayThree,DayFour,DayFive,DaySix,DaySeven]
 
 sols=[(68467,203420),
         (8890,10238),
