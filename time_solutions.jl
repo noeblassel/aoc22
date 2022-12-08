@@ -1,25 +1,19 @@
 #!/bin/env julia
 using BenchmarkTools
 
-for i=1:8
+ndays = parse(Int64,ARGS[1])
+
+include("answers.jl")
+
+for i=1:ndays
     include("$i/sol.jl")
 end
 
-days=[DayOne,DayTwo,DayThree,DayFour,DayFive,DaySix,DaySeven,DayEight]
-
-sols=[(68467,203420),
-        (8890,10238),
-        (7763,2569),
-        (507,897),
-        ("RTGWZTHLD","STHGRZZFR"),
-        (1093,3534),
-        (1182909,2832508),
-        (1560, 252000)]
-        
-for (i,day)=enumerate(days)
-     @assert day.sol("$i/input")==sols[i]
+solutions=[eval(Meta.parse("Day$i.sol")) for i=1:ndays]
+for (i,sol)=enumerate(solutions)
+     @assert sol("$i/input")==answers[i]
 end
 
-@btime for (i,day)=enumerate(days)
-    day.sol("$i/input")
+@btime for (i,sol)=enumerate(solutions)
+    sol("$i/input")
 end
