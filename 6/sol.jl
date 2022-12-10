@@ -1,6 +1,4 @@
 module Day6
-export sol
-
     function sol(f)
         buffer=read(f)
         return find_first_marker(buffer,4),find_first_marker(buffer,14)

@@ -1,6 +1,4 @@
 module Day2
-
-export sol
     function sol(f)
         lines=readlines(f)
         scores=(3,6,0) #draw, win, loss

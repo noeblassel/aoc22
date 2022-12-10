@@ -1,6 +1,4 @@
 module Day5
-export sol
-
 function sol(f)
     lines=readlines(f)
     n_start=first(t[1] for t=enumerate(lines) if !(occursin('[',t[2])))

@@ -1,6 +1,4 @@
 module Day1
-
-export sol
     function sol(f)
         lines=readlines(f)
         elves=Int64[]

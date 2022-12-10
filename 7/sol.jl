@@ -1,6 +1,4 @@
 module Day7
-export sol,FileTree
-
     mutable struct FileTree
         parent :: FileTree
         size :: Int64

@@ -1,7 +1,4 @@
 module Day4
-
-export sol
-
     function sol(f)
         lines=readlines(f)
         n_subset=0

@@ -1,7 +1,4 @@
 module Day8
-
-    export sol
-
     function sol(f)
         rows = [collect(Char,l) for l in readlines(f)]
         grid= reduce(hcat, rows)
